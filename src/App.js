@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from 'react';
+import "react-datepicker/dist/react-datepicker.css";
+
+import {fetchGrades} from './api';
+import {FirstScreen, SecondScreen} from './Screens';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [grades, setGrades] = useState([]);
+  const [bookingData, setBookingData] = useState(null);
+
+  useEffect(() => {
+    fetchGrades.then(grades => setGrades(grades));
+  },[]);
+  const isSecondScreen = Boolean(bookingData);
+  
+  const goBack = () => setBookingData(null);
+
+  if(isSecondScreen) return <SecondScreen bookingData={bookingData} goBack={goBack}/>;
+  
+  return <FirstScreen grades={grades} setBookingData={setBookingData}/>
 }
 
 export default App;

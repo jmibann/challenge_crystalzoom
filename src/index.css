@@ -11,3 +11,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.react-datepicker {
+  font-size: 1rem!important;
+  border: 2px solid #D0D7DF!important;
+  border-radius: 0.3rem!important;
+}
+
+
+.react-datepicker-wrapper {
+  display: flex!important;
+  width: auto!important;
+}
+
+/* .react-datepicker__input-container {
+  width: 100px;
+} */
+
+.react-datepicker__input-container input {
+  font-size: 1rem;
+  border: 2px solid #D0D7DF;
+  border-radius: 0.3rem;
+  padding: 1px 2px 1px 2px;
+  /* margin: 5px; */
+}
