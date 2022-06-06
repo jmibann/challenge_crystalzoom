@@ -20,6 +20,7 @@ const girl2 = require('../images/girl2.png');
    'Friday',
    'Saturday'
   ];
+  
  const MONTH_NAME = [
    'January',
    'February',

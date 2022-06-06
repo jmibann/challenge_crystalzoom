@@ -9,7 +9,7 @@ function App() {
   const [bookingData, setBookingData] = useState(null);
 
   useEffect(() => {
-    fetchGrades.then(grades => setGrades(grades));
+    fetchGrades().then(grades => setGrades(grades));
   },[]);
   const isSecondScreen = Boolean(bookingData);
   

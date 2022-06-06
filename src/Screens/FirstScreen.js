@@ -40,7 +40,7 @@ const FirstScreen = ({grades, setBookingData}) => {
 
       <Select grades={grades} onChange={onSelectChange} value={grade}/>
 
-      <div className="flex flex-row w-1/2 justify-between mb-4">
+      <div data-testid="TimeRangePickerContainer" className="flex flex-row w-1/2 justify-between mb-4">
         <TimeRangePicker
           startTime={startTime}
           endTime={endTime}

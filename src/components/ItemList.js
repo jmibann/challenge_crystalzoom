@@ -14,7 +14,7 @@ const ItemList = ({booking}) => {
   const availableCls = isAvailable ? 'text-teal-600' : 'text-amber-500'
 
     return(
-      <div className="flex flex-row w-full p-2">
+      <div className="flex flex-row w-full p-2" data-testid="item-list">
         <div className="flex items-center w-2/12">
           <img className="inline-block h-12 w-12 rounded-full ring-2 ring-white" src={avatar} alt={proffessional}/>
         </div>
